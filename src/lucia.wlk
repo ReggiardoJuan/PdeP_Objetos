@@ -1,11 +1,18 @@
 
 object lucia {
+	// Definicion variables
 	var grupo = #{}
-	var habilidad = 70
-	var precio
+	const habilidad = 70
+	var presentacion
+	const concurrido = 5000
 	
+	// Getters y Setters	
 	method grupo() = grupo
 	method grupo(_grupo) { grupo.add(_grupo) } 
+	method presentacion() = presentacion
+	method presentacion(_presentacion) { presentacion = _presentacion }
+	
+	// Otros metodos
 	method habilidad() {
 		if (! grupo.isEmpty()){
 			return habilidad - 20
@@ -19,11 +26,11 @@ object lucia {
 		return false
 		
 	}
-/*	method precio(){
-		//cambiar por concurrido mas tarde
-		if (_presentacion.capacidad() > 5000) {
+	method precio(){
+		
+		if (presentacion.capacidad() > concurrido) {
 			return 500
 		}
 		return 400
-	} */ 
+	}  
 }
