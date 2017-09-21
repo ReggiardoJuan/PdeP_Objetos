@@ -1,0 +1,15 @@
+import joaquin.*
+test "Joaquin tiene habilida 20" {
+
+	assert.equals(20,joaquin.habilidad())
+
+}
+
+
+test "Pertenece al grupo Pimpinela y su habilidad es 25 "  {
+	
+	joaquin.grupo("Pimpinela")
+	assert.equals(25,joaquin.habilidad())
+	
+}
+
