@@ -9,4 +9,10 @@ class Grupo {
 		integrantes.add(_alguien)
 		_alguien.grupo(self)
 	}
+	
+	// Otros metodos
+	method dejarGrupo(_integrante){ 
+		integrantes.remove(_integrante)
+		_integrante.grupo().remove(self)
+	}
 }
