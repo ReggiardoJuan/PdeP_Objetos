@@ -1,0 +1,58 @@
+import joaquin.*
+import lucia.*
+import luisAlberto.*
+import cancion.*
+
+describe "Test de interpretacion de canciones" {
+	
+	var cisne = new Cancion()
+	var laFamilia = new Cancion()
+	
+	fixture {
+		cisne.letra("Hoy   el   viento   se  abrió   quedó   vacío   el
+					 aire   una   vez   más  y   el   manantial   brotó 
+					 y   nadie   está aquí​ ​ y ​ ​ puedo​ ​ ver​ ​ que​ ​ solo​
+					​ estallan​ ​ las​ ​ hojas​ ​ al​ ​ brillar")
+		cisne.segundos(312)
+		
+		laFamilia.letra("Quiero   brindar  por​ ​ mi​ ​ gente​ ​ sencilla,​
+						 por​ ​ el​ ​ amor​ ​ brindo​ ​ por​ ​ la​ ​ familia")
+		laFamilia.segundos(264)
+	}
+
+	test "Queremos​ ​ saber​ ​ si​ ​ Joaquín​ ​ interpreta​ ​ bien​ ​ la​ ​ canción 
+		  “La​ ​ Familia” " {
+		
+		assert.notThat(joaquin.interpretaBien(laFamilia))  	
+	}
+	
+	test "Queremos​ ​ saber​ ​ si​ ​ Joaquín​ ​ interpreta​ ​ bien​ ​ la​ ​ canción “Cisne” " {
+		
+		assert.that(joaquin.interpretaBien(cisne))  
+	}
+	
+	test "Queremos​ ​ saber​ ​ si​ ​ Lucia​ ​ interpreta​ ​ bien​ ​ la​ ​ canción 
+		  “La​ ​ Familia” " {
+		
+		assert.that(lucia.interpretaBien(laFamilia))  	
+	}
+	
+	test "Queremos​ ​ saber​ ​ si​ ​ Lucia ​ interpreta​ ​ bien​ ​ la​ ​ canción “Cisne” " {
+		
+		assert.notThat(lucia.interpretaBien(cisne))  
+	}
+	
+	test "Queremos​ ​ saber​ ​ si​ ​ Luis​ ​ Alberto​ ​ interpreta​ ​ bien​ ​ la 
+		  canción​ ​ “La​ ​ Familia” "{
+		  	
+		assert.that(luisAlberto.interpretaBien(laFamilia))   	
+	}
+	
+	test "Queremos​ ​ saber​ ​ si​ ​ Luis​ ​ Alberto​ ​ interpreta​ ​ bien​ ​ la 
+		  canción​ ​ “Cisne” "{
+		  	
+		assert.that(luisAlberto.interpretaBien(cisne))   	
+	}
+	
+	
+}

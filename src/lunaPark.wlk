@@ -1,3 +1,7 @@
+import joaquin.*
+import lucia.*
+import luisAlberto.*
+
 object lunaPark {
 	// Definicion variables
 	var artistas = #{}

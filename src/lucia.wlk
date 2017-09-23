@@ -26,9 +26,9 @@ object lucia {
 		return false
 		
 	}
-	method precio(){
+	method precio(_presentacion){
 		
-		if (presentacion.capacidad() > concurrido) {
+		if (_presentacion.capacidad() > concurrido) {
 			return 500
 		}
 		return 400

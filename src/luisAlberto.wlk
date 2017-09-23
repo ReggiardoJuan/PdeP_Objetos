@@ -16,10 +16,10 @@ object luisAlberto {
 	method guitarra(_guitarra) { guitarra = _guitarra }
 	
 	// Otros metodos
-	method habilidad() { return guitarra.valor() * 8 }
+	method habilidad() { return 100.min(guitarra.valor() * 8) }
 	method interpretaBien(_cancion) = true
-	method precio(){
-		if ((presentacion.fecha().month() < 9 ) && (presentacion.fecha().year() <= 2017 )) {
+	method precio(_presentacion){
+		if ((_presentacion.fecha().month() < 9 ) && (_presentacion.fecha().year() <= 2017 )) {
 			return 1000
 		}
 		return 1200

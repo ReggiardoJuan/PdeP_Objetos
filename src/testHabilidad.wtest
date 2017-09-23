@@ -1,0 +1,67 @@
+import joaquin.*
+import lucia.*
+import luisAlberto.*
+import grupo.*
+import gibson.*
+import fender.*
+
+describe "Tests de habilidad" {
+
+	var pimpinelas = new Grupo()
+		 
+	fixture {
+		pimpinelas.integrantes(joaquin)
+		pimpinelas.integrantes(lucia)
+	}
+
+	test "Joaquín​ ​ canta​ ​ en​ ​ el​ ​ grupo​ ​ Pimpinela.​ ​ Queremos conocer​ ​ su​ ​ habilidad "  {
+		
+		assert.equals(25,joaquin.habilidad())
+	}
+
+	test "Joaquín​ canta​​ en​ el​ grupo​ Pimpinela,​y decide​ lanzar su​ carrera​​ solista​ (deja​ el​ grupo).
+		  Queremos​ ​ conocer su​ ​ habilidad. "  {
+		
+		pimpinelas.dejarGrupo(joaquin)
+		assert.equals(20,joaquin.habilidad())
+	}
+ 
+ 	test "Lucía​ ​ canta​ ​ en​ ​ el​ ​ grupo​ ​ Pimpinela.​ ​ Queremos​ ​ saber 
+		  su​ ​ habilidad. " {
+		
+		assert.equals(50,lucia.habilidad())	
+	}
+ 	
+ 	test "Lucía​ ​ canta​ ​ en​ ​ el​ ​ grupo​ ​ Pimpinela,​ ​ y ​ ​ lanza​ ​ su​ ​ carrera 
+		  solista​ ​ (deja​ ​ el​ ​ grupo)"{
+		
+		pimpinelas.dejarGrupo(lucia)
+ 		assert.equals(70,lucia.habilidad())
+	}
+	
+	test "Luis​ ​ Alberto​ ​ toca​ ​ con​ ​ la​ ​ Fender.​ ​ Queremos​ ​ saber​ ​ su 
+		  habilidad" {
+		
+		luisAlberto.guitarra(fender)
+		assert.equals(80,luisAlberto.habilidad()) 	
+	}
+	
+	test "Luis​ ​ Alberto​ ​ toca​ ​ ahora​ ​ con​ ​ la​ ​ Gibson​ ​ sana. 
+		  Queremos​ ​ saber​ ​ su​ ​ habilidad. " {
+		
+		luisAlberto.guitarra(gibson)
+		assert.equals(100,luisAlberto.habilidad()) 	  	
+	}
+	
+	test "Alguien​ ​ trata​ ​ mal​ ​ a ​ ​ la​ ​ Gibson​ ​ y ​ ​ ahora​ ​ no​ ​ está​ ​ sana. 
+		  Luis​ ​ Alberto​ ​ toca​ ​ con​ ​ la​ ​ Gibson." {
+		
+		gibson.romper()
+		luisAlberto.guitarra(gibson)
+		assert.equals(40,luisAlberto.habilidad())
+	}
+}
+
+
+
+

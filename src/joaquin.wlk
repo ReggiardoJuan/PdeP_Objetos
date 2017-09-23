@@ -1,3 +1,6 @@
+import laTrastienda.*
+import lunaPark.*
+import lucia.*
 object joaquin {
 	// Definicion variables
 	var grupo = #{}
@@ -23,8 +26,8 @@ object joaquin {
 		}
 		return false
 	}
-	method precio(){
-		if (presentacion.artistas().contains(self) && presentacion.artistas().size()>1){
+	method precio(_presentacion){
+		if (_presentacion.artistas().contains(self) && _presentacion.artistas().size() == 1){
 			return 100
 		}
 		return 50
