@@ -1,6 +1,4 @@
-import laTrastienda.*
-import lunaPark.*
-import lucia.*
+
 object joaquin {
 	// Definicion variables
 	var grupo = #{}
