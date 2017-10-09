@@ -19,13 +19,13 @@ object joaquin {
 		return habilidad
 	}
 	method interpretaBien(_cancion){
-		if (_cancion.segundos() > 300){ 
+		if ( _cancion.cancionLarga() ){ 
 			return true
 		}
 		return false
 	}
 	method precio(_presentacion){
-		if (_presentacion.artistas().contains(self) && _presentacion.artistas().size() == 1){
+		if ( _presentacion.artistas(self) && _presentacion.presentacionUnica() ){
 			return 100
 		}
 		return 50

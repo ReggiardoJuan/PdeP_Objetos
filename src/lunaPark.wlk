@@ -14,4 +14,6 @@ object lunaPark {
 	method fecha() = fecha
 	method fecha(_fecha) { fecha = _fecha }
 	method capacidad() = capacidad
+	method concurrido() = capacidad > 5000
+	method presentacionUnica() = { artistas.size() == 1}
 }

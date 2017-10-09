@@ -4,7 +4,6 @@ object lucia {
 	var grupo = #{}
 	const habilidad = 70
 	var presentacion
-	const concurrido = 5000
 	
 	// Getters y Setters	
 	method grupo() = grupo
@@ -20,15 +19,13 @@ object lucia {
 		return habilidad
 	}
 	method interpretaBien(_cancion){
-		if (_cancion.letra().contains("familia")){ 
+		if ( _cancion.tienePalabra("familia") ){ 
 			return true
 		}
-		return false
-		
+		return false		
 	}
 	method precio(_presentacion){
-		
-		if (_presentacion.capacidad() > concurrido) {
+		if (_presentacion.concurrido()) {
 			return 500
 		}
 		return 400
