@@ -18,5 +18,7 @@ object laTrastienda {
 		return 400
 	}
 	method concurrido() = self.capacidad() > 5000
-	method presentacionUnica() = { artistas.size() == 1}
+	method presentacionUnica(estrellita) { 
+		return artistas.contains(estrellita) && artistas.size() == 1
+	}
 }

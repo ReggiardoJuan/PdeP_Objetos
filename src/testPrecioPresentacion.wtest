@@ -9,6 +9,8 @@ describe "Test de precio por presentacion y capacidad" {
 	fixture {
 		lunaPark.fecha(new Date(20,04,2017))
 		laTrastienda.fecha(new Date(15,11,2017))
+		[joaquin,lucia,luisAlberto].forEach( {persona => persona.presentacion(lunaPark)})
+		[joaquin,lucia,luisAlberto].forEach( {persona => persona.presentacion(laTrastienda)})
 		[joaquin,lucia,luisAlberto].forEach( {persona => lunaPark.artistas(persona)})
 		[joaquin,lucia,luisAlberto].forEach( {persona => laTrastienda.artistas(persona)})
 	}

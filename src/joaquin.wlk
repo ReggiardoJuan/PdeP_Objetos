@@ -25,9 +25,12 @@ object joaquin {
 		return false
 	}
 	method precio(_presentacion){
-		if ( _presentacion.artistas(self) && _presentacion.presentacionUnica() ){
+		if ( _presentacion.presentacionUnica(self) ){
 			return 100
 		}
 		return 50
+	}
+	method dejarGrupo(_grupo) {
+		grupo.remove(_grupo)
 	}
 }

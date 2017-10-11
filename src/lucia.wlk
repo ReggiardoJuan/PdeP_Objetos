@@ -30,4 +30,7 @@ object lucia {
 		}
 		return 400
 	}  
+	method dejarGrupo(_grupo) {
+		grupo.remove(_grupo)
+	}
 }

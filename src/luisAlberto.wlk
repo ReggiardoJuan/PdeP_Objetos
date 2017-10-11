@@ -24,4 +24,7 @@ object luisAlberto {
 		}
 		return 1200
 	}
+	method dejarGrupo(_grupo) {
+		grupo.remove(_grupo)
+	}
 }

@@ -12,6 +12,8 @@ describe "Tests de habilidad" {
 	fixture {
 		pimpinelas.integrantes(joaquin)
 		pimpinelas.integrantes(lucia)
+		joaquin.grupo(pimpinelas)
+		lucia.grupo(pimpinelas)
 	}
 
 	test "Joaquín​ ​ canta​ ​ en​ ​ el​ ​ grupo​ ​ Pimpinela.​ ​ Queremos conocer​ ​ su​ ​ habilidad "  {
@@ -22,7 +24,7 @@ describe "Tests de habilidad" {
 	test "Joaquín​ canta​​ en​ el​ grupo​ Pimpinela,​y decide​ lanzar su​ carrera​​ solista​ (deja​ el​ grupo).
 		  Queremos​ ​ conocer su​ ​ habilidad. "  {
 		
-		pimpinelas.dejarGrupo(joaquin)
+		joaquin.dejarGrupo(pimpinelas)
 		assert.equals(20,joaquin.habilidad())
 	}
  
@@ -35,7 +37,7 @@ describe "Tests de habilidad" {
  	test "Lucía​ ​ canta​ ​ en​ ​ el​ ​ grupo​ ​ Pimpinela,​ ​ y ​ ​ lanza​ ​ su​ ​ carrera 
 		  solista​ ​ (deja​ ​ el​ ​ grupo)"{
 		
-		pimpinelas.dejarGrupo(lucia)
+		lucia.dejarGrupo(pimpinelas)
  		assert.equals(70,lucia.habilidad())
 	}
 	
